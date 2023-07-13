@@ -4,6 +4,7 @@
   "repository": "https://github.com/TryGhost/Koenig/tree/master/packages/kg-default-cards",
   "author": "Ghost Foundation",
   "license": "MIT",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "dev": "echo \"Implement me!\"",
