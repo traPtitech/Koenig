@@ -36,6 +36,7 @@
     "@tryghost/url-utils": "^4.0.0",
     "handlebars": "^4.7.6",
     "juice": "^9.0.0",
+    "highlight.js": "^11.8.0",
     "lodash": "^4.17.21",
     "luxon": "^3.0.0"
   }
