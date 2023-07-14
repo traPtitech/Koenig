@@ -4221,6 +4221,40 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
+"@traptitech/markdown-it-katex@^3.5.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@traptitech/markdown-it-katex/-/markdown-it-katex-3.6.0.tgz#6f2605668ecf56a50aa2fadce1fc76f90dc82529"
+  integrity sha512-CnJzTWxsgLGXFdSrWRaGz7GZ1kUUi8g3E9HzJmeveX1YwVJavrKYqysktfHZQsujdnRqV5O7g8FPKEA/aeTkOQ==
+  dependencies:
+    katex "^0.16.0"
+
+"@traptitech/markdown-it-regexp@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@traptitech/markdown-it-regexp/-/markdown-it-regexp-0.5.3.tgz#c145c6a2249c557202131c741fdaa9e7b80fed8b"
+  integrity sha512-1PhwqY/vsef2OI8xOxUTGTPTMW3J65AG1LhKhkTJFgNVsu6tN9LGVBz/Y8vKPNNXuZOxhUWR3Xg8N91Dx3aH4A==
+
+"@traptitech/markdown-it-spoiler@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@traptitech/markdown-it-spoiler/-/markdown-it-spoiler-1.1.6.tgz#973e92045699551e2c9fb39bbd673ee48bc90b83"
+  integrity sha512-tH/Fk1WMsnSuLpuRsXw8iHtdivoCEI5V08hQ7doVm6WmzAnBf/cUzyH9+GbOldPq9Hwv9v9tuy5t/MxmdNAGXg==
+
+"@traptitech/traq-markdown-it@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@traptitech/traq-markdown-it/-/traq-markdown-it-6.3.0.tgz#2e210e22b1da1ee76587dc7356fcdd7db3d7e96f"
+  integrity sha512-66sDdX7AXYve8R41hopuI+3Sxq36facQhN1te0RiLq1BjiGcZQoKbDFeN5zltbe9veBJ6eGiGJoeSdHFK7HBRA==
+  dependencies:
+    "@traptitech/markdown-it-katex" "^3.5.0"
+    "@traptitech/markdown-it-regexp" "^0.5.3"
+    "@traptitech/markdown-it-spoiler" "^1.1.6"
+    highlight.js "^11.3.1"
+    katex "^0.16.0"
+    markdown-it "^13.0.1"
+    markdown-it-container "^3.0.0"
+    markdown-it-image-filter "^1.1.0"
+    markdown-it-json "^1.0.2"
+    markdown-it-link-attributes "^4.0.0"
+    markdown-it-mark "^3.0.1"
+
 "@tryghost/color-utils@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@tryghost/color-utils/-/color-utils-0.2.0.tgz#c8a2cf06ec9fb8a7b4ed9bcfc2a96b1237b58eda"
@@ -10786,6 +10820,11 @@ highlight.js@^10.5.0:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
+highlight.js@^11.3.1:
+  version "11.8.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.8.0.tgz#966518ea83257bae2e7c9a48596231856555bb65"
+  integrity sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==
+
 hmac-drbg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -12553,6 +12592,13 @@ just-extend@^4.0.2:
   resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-4.2.1.tgz#ef5e589afb61e5d66b24eca749409a8939a8c744"
   integrity sha512-g3UB796vUFIY90VIv/WX3L2c8CS2MdWUww3CNrYmqza1Fg0DURc2K/O4YrnklBdQarSJ/y8JnJYDGc+1iumQjg==
 
+katex@^0.16.0:
+  version "0.16.8"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.8.tgz#89b453f40e8557f423f31a1009e9298dd99d5ceb"
+  integrity sha512-ftuDnJbcbOckGY11OO+zg3OofESlbR5DRl2cmN8HeWeeFIV7wTXvAOx8kEjZjobhA+9wh2fbKeO6cdcA9Mnovg==
+  dependencies:
+    commander "^8.3.0"
+
 keyv@^4.5.3:
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.3.tgz#00873d2b046df737963157bd04f294ca818c9c25"
@@ -13391,10 +13437,20 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.4.tgz#c95415ef451499d7602b91095f3c8e8975f78535"
   integrity sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==
 
+markdown-it-container@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-container/-/markdown-it-container-3.0.0.tgz#1d19b06040a020f9a827577bb7dbf67aa5de9a5b"
+  integrity sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==
+
 markdown-it-footnote@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/markdown-it-footnote/-/markdown-it-footnote-3.0.3.tgz#e0e4c0d67390a4c5f0c75f73be605c7c190ca4d8"
   integrity sha512-YZMSuCGVZAjzKMn+xqIco9d1cLGxbELHZ9do/TSYVzraooV8ypsppKNmUJ0fVH5ljkCInQAtFpm8Rb3eXSrt5w==
+
+markdown-it-image-filter@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-image-filter/-/markdown-it-image-filter-1.1.0.tgz#be4a29284c26ce51d82d426c5fb9f124a3eba47b"
+  integrity sha512-JwXUqgW9ySE576M8vCkajtkkeBEeKov5yT0F4o9Gd/cQrrj+UnKzVz8WIx0o3613CI8dPPcS1q44LDdZcikyGQ==
 
 markdown-it-image-lazy-loading@^1.1.0:
   version "1.2.0"
@@ -13403,12 +13459,22 @@ markdown-it-image-lazy-loading@^1.1.0:
   dependencies:
     image-size "^1.0.0"
 
+markdown-it-json@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/markdown-it-json/-/markdown-it-json-1.0.2.tgz#9375713c2baf3781a8acbcbbb8a354d3c915eff8"
+  integrity sha512-R/1ZW3JU+ariFafSnV4KP8lbhs80P2SkdB2BdY5OYVoDkaNYeJUNcfnddTF6XmwTOL85Y5fO6urnkFNvkyOPeA==
+
 markdown-it-lazy-headers@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/markdown-it-lazy-headers/-/markdown-it-lazy-headers-0.1.3.tgz#e70dd4da79c87a9ce82ca4701b8b7c0e2d72297b"
   integrity sha512-65BxqvmYLpVifv6MvTElthY8zvZ/TpZBCdshr/mTpsFkqwcwWtfD3YoSE7RYSn7ugnEAAaj2gywszq+hI/Pxgg==
 
-markdown-it-mark@^3.0.0:
+markdown-it-link-attributes@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-link-attributes/-/markdown-it-link-attributes-4.0.1.tgz#25751f2cf74fd91f0a35ba7b3247fa45f2056d88"
+  integrity sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==
+
+markdown-it-mark@^3.0.0, markdown-it-mark@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it-mark/-/markdown-it-mark-3.0.1.tgz#51257db58787d78aaf46dc13418d99a9f3f0ebd3"
   integrity sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==
@@ -13423,10 +13489,10 @@ markdown-it-sup@^1.0.0:
   resolved "https://registry.yarnpkg.com/markdown-it-sup/-/markdown-it-sup-1.0.0.tgz#cb9c9ff91a5255ac08f3fd3d63286e15df0a1fc3"
   integrity sha512-E32m0nV9iyhRR7CrhnzL5msqic7rL1juWre6TQNxsnApg7Uf+F97JOKxUijg5YwXz86lZ0mqfOnutoryyNdntQ==
 
-markdown-it@^13.0.0:
-  version "13.0.2"
-  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-13.0.2.tgz#1bc22e23379a6952e5d56217fbed881e0c94d536"
-  integrity sha512-FtwnEuuK+2yVU7goGn/MJ0WBZMM9ZPgU9spqlFs7/A/pDIUNSOQZhUgOqYCficIuR2QaFnrt8LHqBWsbTAoI5w==
+markdown-it@^13.0.0, markdown-it@^13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-13.0.1.tgz#c6ecc431cacf1a5da531423fc6a42807814af430"
+  integrity sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==
   dependencies:
     argparse "^2.0.1"
     entities "~3.0.1"

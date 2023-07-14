@@ -1,5 +1,10 @@
 const MarkdownIt = require('markdown-it');
 const semver = require('semver');
+const {
+    createHighlightFunc,
+    katexPlugin,
+    useContainer
+} = require('@traptitech/traq-markdown-it');
 const {slugify: kgSlugify} = require('@tryghost/kg-utils');
 
 const renderers = {};
@@ -21,7 +26,13 @@ const namedHeaders = function ({ghostVersion} = {}) {
 
         // originally from https://github.com/leff/markdown-it-named-headers
         // moved here to avoid pulling in http://stringjs.com dependency
-        md.renderer.rules.heading_open = function (tokens, idx, something, somethingelse, self) {
+        md.renderer.rules.heading_open = function (
+            tokens,
+            idx,
+            something,
+            somethingelse,
+            self
+        ) {
             const usedHeaders = {};
 
             tokens[idx].attrs = tokens[idx].attrs || [];
@@ -50,7 +61,12 @@ const selectRenderer = function (options) {
             return renderers['<4.x'];
         }
 
-        const markdownIt = new MarkdownIt({html: true, breaks: true, linkify: true})
+        const markdownIt = new MarkdownIt({
+            highlight: createHighlightFunc('blog-code'),
+            html: true,
+            breaks: true,
+            linkify: true
+        })
             .use(require('markdown-it-footnote'))
             .use(require('markdown-it-lazy-headers'))
             .use(require('markdown-it-mark'))
@@ -62,6 +78,10 @@ const selectRenderer = function (options) {
         markdownIt.linkify.set({
             fuzzyLink: false
         });
+        markdownIt.use(katexPlugin, {
+            output: 'html'
+        });
+        useContainer(markdownIt);
 
         renderers['<4.x'] = markdownIt;
         return markdownIt;
@@ -70,7 +90,12 @@ const selectRenderer = function (options) {
             return renderers.latest;
         }
 
-        const markdownIt = new MarkdownIt({html: true, breaks: true, linkify: true})
+        const markdownIt = new MarkdownIt({
+            highlight: createHighlightFunc('blog-code'),
+            html: true,
+            breaks: true,
+            linkify: true
+        })
             .use(require('markdown-it-footnote'))
             .use(require('markdown-it-lazy-headers'))
             .use(require('markdown-it-mark'))
@@ -82,14 +107,18 @@ const selectRenderer = function (options) {
         markdownIt.linkify.set({
             fuzzyLink: false
         });
+        markdownIt.use(katexPlugin, {
+            output: 'html'
+        });
+        useContainer(markdownIt);
 
         renderers.latest = markdownIt;
         return markdownIt;
     }
 };
-
+const getRandom = () => Math.random().toString(36).slice(2, 9);
 module.exports = {
     render: function (markdown, options = {}) {
-        return selectRenderer(options).render(markdown);
+        return selectRenderer(options).render(markdown, {docId: getRandom()});
     }
 };
